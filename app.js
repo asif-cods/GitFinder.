@@ -14,7 +14,7 @@ submitBtn.addEventListener("click", (e) => {
     let userText = document.querySelector("#searchUser").value;
 
     if(userText === ""){
-        alert("Please fill the fileds")
+        ui.showAlert("Please fill the fileds","alert-info");
     }else{
         github.getUser(userText)
         .then(data => ui.showProfile(data))

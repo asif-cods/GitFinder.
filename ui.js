@@ -39,6 +39,19 @@ class UI {
 
     }
 
+    showAlert(message, className){
+        let displayAlert = document.querySelector(".show-alert");
+        displayAlert.innerHTML = `
+            <div class="alert ${className}" role="alert">
+            ${message}
+            </div>
+        `;
+        setTimeout(()=> {
+            displayAlert.innerHTML = "";
+        }, 4000);
+    
+    }
+
     clearProfile(){
         this.profile.innerHTML = "";
     }
